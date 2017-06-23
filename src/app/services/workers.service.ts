@@ -5,11 +5,14 @@ export class WorkersService {
 
   constructor() { }
   allWorkers = [];
-  getWorkers(){ this.allWorkers = WORKERS.slice(0);  }
+  getWorkers(){ 
+    return this.allWorkers = WORKERS.slice(0);  
+  }
 
   getWorkerDetail(id: number){ 
     return WORKERS.slice(0).find( i => i.id == id);
   }
+  
 }
 
 const WORKERS = [

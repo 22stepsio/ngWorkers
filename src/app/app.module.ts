@@ -13,6 +13,7 @@ import { WorkerDetailComponent } from './worker-detail/worker-detail.component';
 
 import {RoutingModule } from './routing/routing.module';
 import {WorkersService } from './services/workers.service';
+import { AllWorkersComponent } from './all-workers/all-workers.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {WorkersService } from './services/workers.service';
     WorkersByCategoryComponent,
     WorkersByFilterComponent,
     NotFoundComponent,
-    WorkerDetailComponent
+    WorkerDetailComponent,
+    AllWorkersComponent
   ],
   imports: [
     BrowserModule,

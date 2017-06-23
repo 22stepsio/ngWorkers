@@ -7,6 +7,7 @@ import { HomeComponent } from '../home/home.component';
 import { WorkersByCategoryComponent } from '../workers-by-category/workers-by-category.component';
 import { WorkersByFilterComponent } from '../workers-by-filter/workers-by-filter.component';
 import { WorkerDetailComponent } from '../worker-detail/worker-detail.component';
+import { AllWorkersComponent } from '../all-workers/all-workers.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
 
 
@@ -15,6 +16,8 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent },
   {path: 'workersByCategory', component: WorkersByCategoryComponent },
   {path: 'workersByFilter', component: WorkersByFilterComponent },
+  {path: 'allWorkers', component: AllWorkersComponent },
+  {path: 'worker-detail/:id', component: WorkerDetailComponent },
   {path: '', redirectTo: 'home', pathMatch:'full' },
   {path:'**',component: NotFoundComponent }
 ];
