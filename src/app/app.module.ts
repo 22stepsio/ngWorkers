@@ -14,6 +14,7 @@ import { WorkerDetailComponent } from './worker-detail/worker-detail.component';
 import {RoutingModule } from './routing/routing.module';
 import {WorkersService } from './services/workers.service';
 import { AllWorkersComponent } from './all-workers/all-workers.component';
+import { WorkersByImageComponent } from './workers-by-image/workers-by-image.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AllWorkersComponent } from './all-workers/all-workers.component';
     WorkersByFilterComponent,
     NotFoundComponent,
     WorkerDetailComponent,
-    AllWorkersComponent
+    AllWorkersComponent,
+    WorkersByImageComponent
   ],
   imports: [
     BrowserModule,
