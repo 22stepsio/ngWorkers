@@ -1,3 +1,58 @@
-<p>
-  workers-by-category works!
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" [class.active]="filterBy=='Accountant'" (click)="filterBy='Accountant'">Accountant</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" [class.active]="filterBy=='Architect'" (click)="filterBy='Architect'">Architect</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" [class.active]="filterBy=='Dentist'" (click)="filterBy='Dentist'">Dentist</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" [class.active]="filterBy=='Designer'" (click)="filterBy='Designer'">Designer</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" [class.active]="filterBy=='Engineer'" (click)="filterBy='Engineer'">Engineer</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" [class.active]="filterBy=='Photographer'" (click)="filterBy='Photographer'">Photographer</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" [class.active]="filterBy=='Journalist'" (click)="filterBy='Journalist'">Journalist</button>
+      </div>
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default" [class.active]="filterBy=='Lawyer'" (click)="filterBy='Lawyer'">Lawyer</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="sub-header">lelele</h2>
+    <table class="table table-striped">
+      <thead>  
+        <tr>
+          <td>Nro</td>
+          <td>Nombre</td>
+          <td>Edad</td>
+          <td>Email</td>
+          <td>Profesion</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let x of (losTrabajadores|filtroProfesion:filterBy); let i = index">
+          <td>{{i+1}}</td>
+          <td><a routerLink="/worker-detail/{{x.id}}">{{x.name}}</a></td>
+          <td>{{x.age}}</td>
+          <td>{{x.email}}</td>
+          <td>{{x.category}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
