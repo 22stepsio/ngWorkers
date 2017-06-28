@@ -16,6 +16,8 @@ import {WorkersService } from './services/workers.service';
 import { AllWorkersComponent } from './all-workers/all-workers.component';
 import { WorkersByImageComponent } from './workers-by-image/workers-by-image.component';
 import { FiltroPipe } from './filtros/filtro.pipe';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { FiltroPipe } from './filtros/filtro.pipe';
     WorkerDetailComponent,
     AllWorkersComponent,
     WorkersByImageComponent,
-    FiltroPipe
+    FiltroPipe,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

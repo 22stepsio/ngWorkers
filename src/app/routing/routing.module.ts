@@ -9,6 +9,8 @@ import { WorkersByFilterComponent } from '../workers-by-filter/workers-by-filter
 import { WorkersByImageComponent } from '../workers-by-image/workers-by-image.component';
 import { WorkerDetailComponent } from '../worker-detail/worker-detail.component';
 import { AllWorkersComponent } from '../all-workers/all-workers.component';
+import { AboutComponent } from '../about/about.component';
+import { ContactComponent } from '../contact/contact.component';
 import { NotFoundComponent } from '../not-found/not-found.component';
 
 
@@ -20,6 +22,8 @@ const appRoutes: Routes = [
   {path: 'workersByImage', component: WorkersByImageComponent },
   {path: 'allWorkers', component: AllWorkersComponent },
   {path: 'worker-detail/:id', component: WorkerDetailComponent },
+  {path: 'about', component: AboutComponent },
+  {path: 'contact', component: ContactComponent },
   {path: '', redirectTo: 'home', pathMatch:'full' },
   {path:'**',component: NotFoundComponent }
 ];
