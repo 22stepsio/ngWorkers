@@ -1,3 +1,31 @@
-<p>
-  workers-by-filter works!
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <h2 class="sub-header">Workers by Filter</h2>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Name: </label>
+        <input type="text" name="debellevarname" [(ngModel)]="busqueda" class="form-control" id="exampleInputEmail1" placeholder="Name">
+      </div>
+    </form>
+  </div>
+</div>
+<div *ngFor="let x of (losTrabajadores|filtroName:busqueda)">
+  <div class="row" *ngIf="x.name === undefined">
+    <div class="col-md-2">
+      <p>No se encontro nada</p>  
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <img src="{{x.picture}}" class="img-responsive">  
+    </div>
+    <div class="col-md-4">
+      <h3 class="sub-header">{{x.name}}</h3>
+        <h4><strong>Age:</strong> {{x.age}}</h4>
+        <h4><strong>Email:</strong> {{x.email}}</h4>
+        <h4><strong>Professions:</strong> {{x.category}}</h4>
+        <h4><strong>Index:</strong> {{i}}</h4>
+    </div>
+  </div>
+  <hr>
+</div>
