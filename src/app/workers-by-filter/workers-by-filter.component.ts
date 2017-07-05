@@ -9,11 +9,24 @@ import { WorkersService } from '../services/workers.service';
 export class WorkersByFilterComponent implements OnInit {
 
   losTrabajadores: any[] = [];
-  binario: number = 0;
   mensaje: string = "No hay resultados";
   constructor(private workService: WorkersService) {
     this.losTrabajadores = workService.getWorkers();
+  
    }
+
+  isEmptyObject(obj) {
+  return (obj && (Object.keys(obj).length === 0));
+}
+
+  objetovacio(objeto){
+    if(objeto.length === 0){
+      return true;
+    }
+    else return false;
+  }
+
+
 
   ngOnInit() {
   }

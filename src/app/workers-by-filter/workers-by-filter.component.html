@@ -9,23 +9,28 @@
     </form>
   </div>
 </div>
-<div *ngFor="let x of (losTrabajadores|filtroName:busqueda)">
-  <div class="row" *ngIf="x.name === undefined">
-    <div class="col-md-2">
-      <p>No se encontro nada</p>  
-    </div>
+<!--Esto muestra un mensaje cuando no hay resultados de la busqueda-->
+<div class="row" *ngIf="objetovacio(losTrabajadores|filtroName:busqueda)">
+  <div class="col-md-12">
+    <p>No se encontro ningun resultado para <strong><em>"{{busqueda}}"</em></strong></p>  
   </div>
+</div>
+<!--...............................................................-->
+
+<!--Esto muestra los resultados gracias al filtroName .............-->
+<div *ngFor="let x of (losTrabajadores|filtroName:busqueda); let i = index">
   <div class="row">
     <div class="col-md-2">
-      <img src="{{x.picture}}" class="img-responsive">  
+      <a routerLink="/worker-detail/{{x.id}}"><img src="{{x.picture}}" class="img-responsive"></a>  
     </div>
     <div class="col-md-4">
       <h3 class="sub-header">{{x.name}}</h3>
         <h4><strong>Age:</strong> {{x.age}}</h4>
         <h4><strong>Email:</strong> {{x.email}}</h4>
         <h4><strong>Professions:</strong> {{x.category}}</h4>
-        <h4><strong>Index:</strong> {{i}}</h4>
+        <h4><strong>Nro:</strong> {{i+1}} </h4>
     </div>
   </div>
   <hr>
 </div>
+  <!--...............................................................-->
