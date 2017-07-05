@@ -9,12 +9,12 @@ import { WorkersService } from '../services/workers.service';
 export class WorkersByFilterComponent implements OnInit {
 
   losTrabajadores: any[] = [];
-  mensaje: string = "No hay resultados";
+  busqueda: string;
   constructor(private workService: WorkersService) {
     this.losTrabajadores = workService.getWorkers();
   
    }
-
+// Estas dos funciones verifican si el objeto de devuelve el filtro esta vacio
   isEmptyObject(obj) {
   return (obj && (Object.keys(obj).length === 0));
 }
@@ -24,8 +24,8 @@ export class WorkersByFilterComponent implements OnInit {
       return true;
     }
     else return false;
-  }
-
+}
+// en caso de ser positivo se imprime un mensaje en el component.html
 
 
   ngOnInit() {
